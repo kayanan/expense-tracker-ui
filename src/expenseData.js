@@ -104,6 +104,7 @@ function getRandomTitle() {
 }
 
 export default function generateDummyData(numEntries) {
+  
   let data = [];
   for (let i = 0; i < numEntries; i++) {
     data.push({
@@ -111,7 +112,7 @@ export default function generateDummyData(numEntries) {
       title: getRandomTitle(),
       amount: parseFloat(getRandomAmount(10, 1000)),
       date: new Date(
-        Math.random() * (2023 - 2019) + 2019,
+        Math.random() * ((new Date().getFullYear())+1 - 2019) + 2019,
         Math.random() * 12,
         Math.random() * (29 - 1) + 1
       ),
