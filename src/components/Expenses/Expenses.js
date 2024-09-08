@@ -18,7 +18,7 @@ const Expenses = (props) => {
   });
 
   return (
-    <div>
+    <React.Fragment>
       <Card className={style['expenses']}>
         <ExpensesFilter
           selected={filteredYear}
@@ -27,7 +27,7 @@ const Expenses = (props) => {
         <ExpensesChart expenses={filteredExpenses} />
         <ExpensesList items={filteredExpenses} />
       </Card>
-    </div>
+    </React.Fragment>
   );
 };
 

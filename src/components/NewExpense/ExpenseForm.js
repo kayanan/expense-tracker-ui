@@ -41,7 +41,7 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <form onSubmit={submitHandler}>
         <div className={style["new-expense__controls"]}>
           <div
@@ -99,7 +99,7 @@ const ExpenseForm = (props) => {
         </div>
       </form>
       <div>{status ? "" : <h1>Field Can't be blank</h1>}</div>
-    </div>
+    </React.Fragment>
   );
 };
 
