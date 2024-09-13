@@ -3,6 +3,7 @@ import Card from "../components/UI/Card";
 import style from "./Login.module.css";
 const Login = (props) => {
   const [signupStatus, UpdateSignupStatus] = useState(false);
+
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -19,7 +20,6 @@ const Login = (props) => {
       props.loginStatus(false);
     }
   };
-
   return (
     <Card className={style.card}>
       <form onSubmit={submitHandler}>
@@ -36,10 +36,8 @@ const Login = (props) => {
         </button>
 
         {!signupStatus && [
-          <h3 className={style.login} key="h3">
-            {" "}
-            Or Sigiup
-          </h3>,
+          <h5 key="or">Or</h5>,
+          <h3 key="signup">Signup</h3>,
           <button key="buttion" type="submit" value="signup">
             SIGNUP
           </button>,

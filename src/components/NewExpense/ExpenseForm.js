@@ -8,7 +8,6 @@ const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
   const [status, setStatus] = useState(true);
-  console.log("");
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -98,7 +97,7 @@ const ExpenseForm = (props) => {
           <button type="submit">Add Expense</button>
         </div>
       </form>
-      <div>{status ? "" : <h1>Field Can't be blank</h1>}</div>
+      <div className={style["new-expense__control"]} >{status ? "" : <h1>Field Can't be blank</h1>}</div>
     </React.Fragment>
   );
 };
